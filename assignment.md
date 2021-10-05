@@ -20,7 +20,6 @@ Formulas to compute area:
 `Rectangle area = height times width  (A = h * w)`
 `Triangle area = half of height times base (A = (h * b)/2 )`
 ```
->Note:  
 
 ## Part II - Practice with Class types.
 ---

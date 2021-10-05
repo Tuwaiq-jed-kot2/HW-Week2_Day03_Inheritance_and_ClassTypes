@@ -2,11 +2,11 @@
 ---
 The Kotlin assignment has two components:
 - Part I: Practice with Inheritance.
-- Part II: Practice with Class types.
+- Part II: Practice with Class types. 
 
 ## Part I - Practice with Inheritance.
 ---
-![alt text](conecpt1.png)
+![alt text](example.png)
 
 To apply the Inheritance concept, create one superclass called `Shape` that has two properties called `shapeName` and `shapeColor`, and also has two functions one called `info()` that return name and color of shape and the other one called `computeArea()` that has no parameter, and return Double data type.
 

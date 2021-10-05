@@ -5,5 +5,5 @@
 - How can apply Inheritance concept in Kotlin language.
 
 ## Getting strated
-Open the [assignment.md](assignment.md) file to get started.
+Open the [assignment.md](assignment.md) file to get started. 
   

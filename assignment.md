@@ -23,10 +23,11 @@ Formulas to compute area:
 
 ## Part II - Practice with Class types.
 ---
-- Create a working example for `nested classes`. (optional)
-
 ### Open Questions:
 - What is the difference between `enum classes` and `data classes`?
+- enum classes is An enum is a special "class" that represents a group of constants (unchangeable variables, like final variables).
+-  An enum cannot be used to create objects, and it cannot extend other classes (but it can implement interfaces).
+- 
 - Which one of the `object` keyword ways can be used for the inheritance concept?
-
+object class as expiration 
 

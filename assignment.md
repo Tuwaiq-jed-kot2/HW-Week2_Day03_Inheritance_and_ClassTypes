@@ -23,7 +23,7 @@ Formulas to compute area:
 
 ## Part II - Practice with Class types.
 ---
-- Create a working example for `nested classes`.
+- Create a working example for `nested classes`. (optional)
 
 ### Open Questions:
 - What is the difference between `enum classes` and `data classes`?

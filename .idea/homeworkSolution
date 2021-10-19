@@ -1,0 +1,64 @@
+import kotlin.math.PI
+
+fun main() {                                         // main function declare
+    val shape = Shape()                              // defining a value of name shape and setting it in class Shape
+
+    shape.info()                                     // calling info function from Shape class
+
+    val circle = Circle ()                           // defining a value of name shape and setting it in class Shape
+    println(circle.computeArea())                    // printing the value of compute area from circle class
+
+    val triangle = Triangle()                        // defining a value of name shape and setting it in class Shape
+    println(triangle.computeArea())                  // printing the value of compute area from triangle class
+
+    val rectangle = Rectangle()                      // defining a value of name shape and setting it in class Shape
+    println(rectangle.computeArea())                 // printing the value of compute area from rectangle class
+}
+
+open class Shape (){                                 // declaring class with name Shape
+    val shapeName = "circle"                         // defining a value of name shapeName and setting it to "circle"
+    val shapeColor = "red"                           // defining a value of name shapeColor and setting it to "red"
+
+
+    fun info (){                                     // declaring info function
+        println("you have $shapeColor $shapeName")   // printing name and color
+    }
+
+    open fun computeArea():Double{                   // declaring computeArea function
+        val area = 0.0                               // defining a value of area  and setting it to 0.0
+        print("the area of your shape = ")           // printing message before the area
+        return area                                  // return value
+    }
+}
+
+class Triangle() : Shape(){                          // declaring class with name Triangle inherited from Shape
+    val height = 15.4                                // defining a value of height and setting it to 15.4
+    val base = 13.4                                  // defining a value of base and setting it to 13.4
+
+    override fun computeArea():Double{               // overriding the function computeArea
+        return ((height * base)/2)                   // return value
+    }
+}
+class Rectangle() : Shape(){                         // declaring class with name Rectangle inherited from Shape
+    val height = 13.9                                // defining a value of height and setting it to 13.9
+    val width = 12.7                                 // defining a value of width and setting it to 12.7
+
+    override fun computeArea():Double{               // overriding the function computeArea
+        return (height * width)                      // return value
+    }
+}
+class Circle() : Shape(){                            // declaring class with name Circle inherited from Shap
+    val radius = 8.7                                 // defining a value of radius and setting it to 13.9
+
+    override fun computeArea():Double{               // overriding the function computeArea
+        return (PI * radius * radius)                // return value
+    }
+}
+
+/*
+optional question 1 :
+ data class is a class in which the primary purpose is to hold data
+ while enum class is to implement predefined values known as enums
+
+ optional question 2:
+ object class keyword */

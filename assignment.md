@@ -24,7 +24,14 @@ Formulas to compute area:
 ## Part II - Practice with Class types. (optional)
 ---
 ### Open Questions:
+**Answer:
 - What is the difference between `enum classes` and `data classes`?
-- Which one of the `object` keyword ways can be used for the inheritance concept? 
+-  **Answer:
+**- the main purpose if `data classes` is hold data.
+- The most basic use case for enum classes is the implementation of type-safe enums.**
+
+
+- Which one of the `object` keyword ways can be used for the inheritance concept?
+  **Answer:override**
 
 

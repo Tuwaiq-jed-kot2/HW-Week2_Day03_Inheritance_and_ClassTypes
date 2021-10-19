@@ -1,0 +1,103 @@
+
+Part1\\\\\\
+
+
+fun main(){
+
+
+
+    val shape = shape()
+    shape.info()
+    //استدعاء
+    val circle = circle ()
+    println(circle.computeArea())
+    // نستخرج حساب الدائره بفنكشن computeArea ونطبعه
+        val rectangle = Rectangle()
+    println(rectangle.computeArea())
+    // نستخرج حساب rectangle بفنكشن computeArea ونطبعه
+        var Triangle =Triangle()
+    println(Triangle.computeArea())
+// نستخرج حساب Triangle بفنكشن computeArea ونطبعه
+
+}
+
+
+fun circle(): Any {
+
+}
+
+open class shape (){
+//اسم الكلاس الاساسي اللي راح نورث منه
+var shapeName = "Circle"
+var shapeColor = "white"
+//القيم لون الشكل واسمه
+fun info (){
+println("the ($shapeName) ($shapeColor)")
+//نستدعي لون الشكل واسمه $ ونطبع
+}
+
+                }
+
+
+         fun computeArea():double{
+             //الفنكشن المطلوب فالسؤال اللي تحسب المساحه
+            val area = 1.1
+            print("area of the shape = ")
+            return area
+             //عشان نطبع قيمه area لذا سوينا ريترن وقبلها تكون جمله الطباعه
+
+        }
+
+    class Rectangle () :shape () {
+        //انشأ سب  كلاس اسمه rectangle يرث من الكلاس الاساسي اللي اسمه shapes
+
+        var width = 2
+        var height = 4
+        //متغيرات اسمها الطول والعرض ولها قيمها
+        override fun computeArea(): Int {
+            //نرسل التنفيذ للكود الموجود فالفئه الاساسيه لكن التغيير يكون فقط فالكلاس هذا (الكلاس الفرعي)
+
+            return height * width
+        }
+    }
+
+        class Triangle() : shape() {
+
+            //انشأ سب  كلاس اسمه Triangle يرث من الكلاس الاساسي اللي اسمه shapes
+
+            var base = 7
+            var height = 2
+
+            override fun computeArea(): Int {
+                //نرسل التنفيذ للكود الموجود فالفئه الاساسيه لكن التغيير يكون فقط فالكلاس هذا (الكلاس الفرعي)
+
+                return height * base
+                //يسوي ريتيرن لقاعده المثلث
+            }
+        }
+
+            class Circle() : shape() {
+                //انشأ سب  كلاس اسمه سيركل يرث من الكلاس الاساسي اللي اسمه shapes
+            }
+                var pi = 3
+            //انشا VAR  وله قيمه
+                var radius = 5
+            //انشا VAR  وله قيمه
+                override fun computeArea(): Int {
+
+
+                }
+
+
+Part1
+Answer1:
+The enum declaration defines a class (called an enum type)
+For example, they have a static values method that returns an array containing
+all of the values of the enum in the order they are declared.
+This method is commonly used in combination with the for-each construct to iterate over the values of an enum type.
+
+A data class is a list of data set allocation attributes and their values.
+You cannot assign a data class to an object; however,
+data class may be used for allocation of a scratch tape to be used to write objects.
+Answer2:
+Object as Expression

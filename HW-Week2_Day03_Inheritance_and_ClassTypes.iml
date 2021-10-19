@@ -10,3 +10,11 @@
     <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
   </component>
 </module>
+//---------p2-------
+What is the difference between enum classes and data classes?
+data class is a class which we can use all function for that date if the data class from type string
+it make it easy to compare and use the opration btween instance.
+enum class i don't under stand the purpose of this class!!
+
+*Which one of the object keyword ways can be used for the inheritance concept?
+the object as expression we can inhertance from the super class by writing the object as a variable.

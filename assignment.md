@@ -4,7 +4,7 @@ The Kotlin assignment has two components:
 - Part I: Practice with Inheritance.
 - Part II: Practice with Class types. 
 
-## Part I - Practice with Inheritance.
+## Part I - Practice with Inheritance. note !! (you MUST add comment in each line explaining your code for good practice)!! this is requiared 
 ---
 ![alt text](example.png)
 

@@ -1,0 +1,102 @@
+
+// part 1
+fun main() {
+
+    val tr = Triangle() // create an object from subclass triangle
+    tr.Info()  // access for function Info that print shape information
+    println(tr.computeArea()) // print the result of compute area for triangle
+
+    val rc = Rectangle() // create an object from subclass rectangle
+    rc.Info() // access for function Info that print shape information
+    println(rc.computeArea()) // print the result of compute area for rectangle
+
+    val c = Circle() // create an object from subclass circle
+    c.Info() //access for function Info that print shape information
+    println(c.computeArea()) // print the result of compute area for circle
+
+}
+
+// declare superclass called shape
+open class Shape {
+
+    // var is open because allow overriding in subclasses
+    open var shapeName: String = ""
+    open var shapeColor: String = ""
+
+
+    //fun Info that has no parameter and return information about the shape(name, color)
+    fun Info() {
+        println(" The $shapeName shape is $shapeColor")
+    }
+
+    // fun computearea that has no parameter and return double the result of computingarea
+    open fun computeArea(): Double {
+        return 0.0
+    }
+
+
+}
+// declare subclass called triangle
+class Triangle : Shape() {
+
+    var base:Double = 2.0 // declare variable and initialize
+    var height:Double = 5.5 // declare variable and initialize
+
+    //var is override because that declared in superclass
+    override var shapeName: String = "triangle"
+    override var shapeColor: String = "blue"
+
+    // fun is override because that declared in superclass and return double
+    override fun computeArea(): Double {
+        print("Compute area of triangle = ")
+        return ((height * base) / 2 )  // triangle area equation
+    }
+
+
+}
+// declare subclass called rectangle
+class Rectangle : Shape() {
+
+    var width:Double = 20.0 //declare variable and initialized
+    var height:Double = 5.9 //declare variable and initialize
+
+    //var is override because that declared in superclass
+    override var shapeName: String = "rectangle"
+    override var shapeColor: String = "red"
+
+    // fun is override because that declared in superclass and return double
+    override fun computeArea(): Double {
+        print("Compute area of rectangle = ")
+        return (width * height) // rectangle area equation
+    }
+
+}
+
+//declare subclass called circle
+class Circle : Shape() {
+
+    var pi: Double = 3.14 //declare var pi and initialize to constant value 3.14
+    var radius: Double = 4.0 // declare var radius and initialize
+
+    //var is override because that declared in superclass
+    override var shapeName: String = "circle"
+    override var shapeColor: String = "green"
+
+    // fun is override because that declared in superclass and return double
+    override fun computeArea(): Double {
+        print("Compute area of circle = ")
+        return (pi * radius * radius) //circle area equation
+    }
+
+
+}
+
+//......................................................//
+
+//part2
+/*1-An enum can, just like a class , have attributes and methods.
+The only difference is that enum constants are public , static and final
+  An enum cannot be used to create objects,and it cannot extend other classes.*/
+
+
+//2- object as expression

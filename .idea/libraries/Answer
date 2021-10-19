@@ -1,0 +1,77 @@
+open class shape { // i made open class to inheriting
+
+
+
+
+    fun info() : String{ //required fun
+
+        return ("the Shape Name is: $shapeName \n The Shape Color is: $shapeColor")
+
+    }
+    open var shapeName="" // required var's
+    open var shapeColor =""
+
+    open fun computeArea():Double {  //we need to inheriting from this fun so i made it open
+        val area = 4.4               //it is Double like the requirement
+        return area
+
+    }
+
+
+
+
+}
+class triangle :shape(){ //first class from the Super!
+
+    override fun computeArea():Double{
+
+        val base =3.2  //value for eich
+        val high =2.6
+
+        return (base*high)/2 //العمليه الحسابية :
+
+
+    }
+
+
+}
+class Rectangle :shape(){ //the second class form the Super!
+    override fun computeArea():Double{
+
+
+
+        val width = 6.1
+        val high = 1.1
+
+        return high*width
+
+    }
+
+
+}
+class circle :shape(){
+    override fun computeArea():Double{
+
+        val pi  = 3.14
+        val radius = 1.1
+
+        return pi*radius*radius
+
+
+    }
+
+}
+
+fun main() { //give name for the val's to print it ;)
+    val t = triangle()
+    val r = Rectangle()
+    val c = circle()
+
+
+    println("triangle compute area:" + t.computeArea())
+    println("Rectangle computeArea area:" + r.computeArea())
+    println("circle computeArea area:" + c.computeArea())
+}
+
+//And here is the END. hope you enjoyed =)
+

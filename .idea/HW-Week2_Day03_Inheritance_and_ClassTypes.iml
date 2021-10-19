@@ -1,9 +1,68 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$" />
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-  </component>
-</module>
+//file1
+fun main() {
+    val c1= Circle() //creating object from the subclass
+    val r1 = Rectangular() //creating object from the subclass
+    val t1 = Triangle() //creating object from the subclass
+    c1.computeArea() //call the fun from the sub class
+    r1.computeArea() //call the fun from the sub class
+    t1.computeArea() //call the fun from the sub class
+
+
+}
+open class Shape { //create class
+    val shapeName =" " //declaration of variable
+    val shapeColor = " " //declaration of variable
+    open fun info(color:String,shape:String): String { //create fun
+        return color+shape // return value
+
+    }
+    open fun computeArea(){ //create fun
+
+    }
+}
+
+//file2
+class Circle:Shape() { //inherit the super class
+    val pi = 3.14
+    val radius = 0
+
+     override fun computeArea() { //override the fun
+    println("Enter radius")
+         var radius = readLine()?.toDouble() //take the radius from user
+         println("the circle Area is ${radius!!* radius!!*pi}")//the result of the area
+
+
+    }
+}
+//file3
+open class Rectangular:Shape() { //inherit the super class
+    val width =0
+    val height = 0
+    override fun computeArea() { //override the fun
+        println("Enter th height")
+        var h = readLine()?.toDouble()//take the height from user
+        println("enter the width")
+        var w = readLine()?.toDouble()//take the width from user
+        println("the Rectangular Area is ${h!!* w!!}") //the result of the area
+
+    }
+}
+//file4
+open class Triangle:Shape() { //inherit the super class
+    val base =0
+    val height = 0
+    override fun computeArea() { //override the fun
+        println("Enter th height")
+        var h = readLine()?.toDouble()//take the height from user
+        println("enter the base")
+        var b = readLine()?.toDouble()//take the base from user
+        println("the Triangle Area is ${(h!!* b!!)/2}")//the result of the area
+
+    }
+}
+
+Q2P1
+ The only difference is that enum constants are public ,An enum cannot be used to create objects
+
+ Q2p2
+ object as expression

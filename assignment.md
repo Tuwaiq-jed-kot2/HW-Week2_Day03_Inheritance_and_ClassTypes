@@ -24,7 +24,6 @@ Formulas to compute area:
 ## Part II - Practice with Class types. (optional)
 ---
 ### Open Questions:
-**Answer:
 - What is the difference between `enum classes` and `data classes`?
 -  **Answer:
 **- the main purpose if `data classes` is hold data.

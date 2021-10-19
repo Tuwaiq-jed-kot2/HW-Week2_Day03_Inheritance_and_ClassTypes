@@ -1,0 +1,101 @@
+open class shape {//superclass defin as open class
+
+    val shapeName:String="" // variable 1
+    var shapeColor:String="" // variable 2
+
+    fun info(shapeName: String, shapeColor: String) { //function have to parameater
+        println("\nthe name of the shape is:$shapeName and the color of the shape is:$shapeColor")// print sentans
+
+    }
+
+    open fun computeArea(x:Double,y:Double):Double {
+        return x+y
+
+    }
+}
+
+fun main() {
+    var T=Triangle() // hear i creat the object from class triangle
+    T.info("triangle","orange") // hear i calling function info to print name and color from class triangle
+    println(T.computeArea(5.7,7.5))
+
+    var R=Rectangle()// hear i creat the object from class rectangle
+    R.info("rectangle","blue") // hear i calling function info to print name and color from class rectangle
+    println(R.computeArea(7.8,7.9))
+
+    var C=Circle()// hear i creat the object from class circle
+    C.info("circle","green") // hear i calling function info to print name and color from class circle
+    println(C.computeArea(3.9,2.7))
+}
+
+
+//
+class Triangle : shape() { // supclass inhertans from superclass shape
+    val base=56 // variable 1
+    val height=67 // variable 2
+
+
+    override fun computeArea(base:Double,height:Double) :Double{ //function to calculate an area of triangle
+        val result=((base*height)/2)
+        println("the area of triangle is:")
+        return result
+
+    }
+
+}
+
+
+//
+class Rectangle:shape() {  //supclass inhertans from superclass shape
+    val width=89 // variable 1
+    val height=78 // variable 2
+
+
+    override fun computeArea(width:Double,height:Double):Double { //function to calculate an area of Rectangle
+        val result=width*height
+        println(" the area of Rectangle is:")
+        return result
+
+    }
+}
+
+
+//
+class Circle:shape() { //supclass inhertans from superclass shape
+    var pi:Double=3.14  //variable 1
+    var half:Double=10.0 // variable 2
+
+
+    override fun computeArea(pi:Double,radius :Double): Double { //function to calculate an area of Rectangle
+
+        var result:Double=(pi*(Math.pow(radius , 2.0)))
+        println(" the area of Circle is:$result")
+        return radius
+
+    }
+
+
+}
+
+
+// optinal Q
+
+
+
+/*Q2
+enum class
+1- Enums increases readability of your code by assigning pre-defined names to constants.
+ 2- define the variable as constant can have its own properties and functions. The properties can be given a default value.
+ 3- An instance of enum class cannot be created using constructors.
+
+ data class
+ 1-must to constant at least one parameter
+ 2- must to created using constructors
+ 3- Data classes cannot be abstract, open, sealed, or inner..
+ */
+
+/* Q2
+(open) for super class
+(: and then the name of super class) with supclass
+
+ */

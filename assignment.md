@@ -21,10 +21,10 @@ Formulas to compute area:
 `Triangle area = half of height times base (A = (h * b)/2 )`
 ```
 
-## Part II - Practice with Class types.
+## Part II - Practice with Class types. (optional)
 ---
 ### Open Questions:
 - What is the difference between `enum classes` and `data classes`?
-- Which one of the `object` keyword ways can be used for the inheritance concept?
+- Which one of the `object` keyword ways can be used for the inheritance concept? 
 
 

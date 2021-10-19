@@ -1,0 +1,111 @@
+import kotlin.math.PI
+import kotlin.math.sqrt
+
+// Part 1
+
+fun main() {
+    // Creating object from the Triangle class
+    val triangle1 = Triangle()
+    // Printing the result from the computeArea function that has been override inside Triangle class
+    println("This triangle area = ${triangle1.computeArea()}")
+
+    // Creating object from the Triangle class
+    val rectangle1 = Rectangle()
+    // Printing the result from the computeArea function that has been override inside Rectangle class
+    println("This triangle area = ${rectangle1.computeArea()}")
+
+    // Creating object from the Triangle class
+    val circle1 = Circle()
+
+    // Printing the result from the computeArea function that has been override inside Circle class
+    println("This triangle area = ${circle1.computeArea()}")
+
+}
+/* create super class shape with two properties name and color,
+and make it open to allow the inherits from it */
+open class Shape(var shapeName:String, var shapeColor:String ){
+
+    /* The first function info has no parameters that return string with the shape info
+    make it open to allow the override */
+    open fun info():String{
+        return "Tha shape is $shapeName with $shapeColor color"
+    }
+
+    /* The second function return double, and it is open to allow the override */
+    open fun computeArea():Double{
+        return 0.0
+    }
+
+}
+
+// This child class inherited form the super class Shape
+class Triangle():Shape("Triangle", "Orange"){
+
+    // Declaration the two triangle properties base and height
+    val base:Double
+    val height:Double
+
+    /*using init to initialize the variables and call the function info every time
+    creating and using object from the class Triangle to print its info*/
+    init {
+        base = 5.4
+        height = 2.2
+        println(info())
+    }
+
+    // the override function from the super class Shape to give the function it owns properties
+    override fun computeArea():Double {
+        // Triangle area formula
+        val area = (height * base)/2
+        // Return the double area after rounding it
+        return String.format("%.2f", area).toDouble()
+    }
+
+}
+
+// This child class inherited form the super class Shape
+class Rectangle():Shape("Rectangle", "Blue"){
+
+    // Declaration the two rectangle properties width and height
+    val width:Double
+    val height:Double
+
+    /*using init to initialize the variables and call the function info every time
+  creating and using object from the class Rectangle to print its info*/
+    init {
+        width = 6.0
+        height = 3.5
+        println(info())
+    }
+    // the override function from the super class Shape to give the function it owns properties
+    override fun computeArea():Double {
+        // Rectangle area formula
+        val area = width * height
+        // Return the double area after rounding it
+        return String.format("%.2f", area).toDouble()
+    }
+}
+
+// This child class inherited form the super class Shape
+class Circle():Shape("Circle","Green"){
+
+    // Declaration the circle property radius
+    val radius:Double
+
+    /*using init to initialize the variables and call the function info every time
+ creating and using object from the class Circle to print its info*/
+    init {
+        radius = 4.5
+        println(info())
+    }
+
+    // the override function from the super class Shape to give the function it owns properties
+    override fun computeArea():Double {
+        // Rectangle area formula
+        val area = PI * sqrt(radius)
+        // Return the double area after rounding it
+        return String.format("%.2f", area).toDouble()
+    }
+}
+
+

@@ -4,7 +4,7 @@ The Kotlin assignment has two components:
 - Part I: Practice with Inheritance.
 - Part II: Practice with Class types. 
 
-## Part I - Practice with Inheritance.
+## Part I - Practice with Inheritance. note !! (you MUST add comment in each line explaining your code for good practice)!! this is requiared 
 ---
 ![alt text](example.png)
 
@@ -21,10 +21,16 @@ Formulas to compute area:
 `Triangle area = half of height times base (A = (h * b)/2 )`
 ```
 
-## Part II - Practice with Class types.
+## Part II - Practice with Class types. (optional)
 ---
 ### Open Questions:
 - What is the difference between `enum classes` and `data classes`?
+
 - Which one of the `object` keyword ways can be used for the inheritance concept?
 Object as an expression
+
+
+- Which one of the `object` keyword ways can be used for the inheritance concept? 
+
+
 

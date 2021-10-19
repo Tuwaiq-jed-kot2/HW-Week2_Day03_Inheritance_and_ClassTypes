@@ -1,12 +1,79 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
-  </component>
-</module>
+//عملنا كلاس وخليناهopen نورث منو ونعمل  2-properties
+  open class Shape(var shapeName:String,var shapeColor:String){
+// عملنا funوسميناهاinfo وترجع two partmaterهيا shaper name,shape color
+       fun info(): String {
+        return ("$shapeColor $shapeName")
+       }
+    // عملناfunترجع doubleوعملناهاopen عشان نورث منو بطريقة override
+       open fun computerArea():Double{
+           return 0.0
+       }
+
+
+  }
+//عملنا كلاس Triangleيورث منShapeنورث  properties حقتو
+  class Triangle():Shape("Triangle","Red"){
+    //عرفنا متغريين واعطينهم  doubleواعطينهم قيمة
+     var baseNum:Double=10.0
+     var heightNum:Double=20.0
+    //عملنا معادلة  الرياضية حطينهافي متغير
+     var resultTri=(heightNum*baseNum)/2
+
+    //  عملناfunترجع double بطريقة override نورث ويرجع متغير
+     override fun computerArea(): Double {
+         return resultTri
+     }
+
+  }
+
+//عملنا كلاس Rectangleيورث منShapeنورث  properties حقتو
+     class Rectangle:Shape("Rectangle","Blue"){
+    //عرفنا متغريين واعطينهم  doubleواعطينهم قيمة
+         var widthNum:Double=30.0
+         var heightNumber:Double=20.0
+    //عملنا معادلة  الرياضية حطينهافي متغير
+         var resultRec=widthNum*heightNumber
+    //  عملناfunترجع double بطريقة override نورث ويرجع متغير
+      override fun computerArea(): Double {
+        return resultRec
+         }
+    }
+
+//عملنا كلاس Circleيورث منShapeنورث  properties حقتو
+    class Circle:Shape("Circle","Yellow"){
+    //عرفنا متغريين واعطينهم  doubleواعطينهم قيمة
+        var piNumber:Double=30.0
+        val radius:Double=3.14
+    //عملنا معادلة  الرياضية حطينهافي متغير
+        var resultCir=radius*(piNumber*piNumber)
+    //  عملناfunترجع double بطريقة override نورث ويرجع متغير
+      override fun computerArea(): Double {
+        return resultCir
+          }
+     }
+
+  fun main() {
+      //عرفنا اوبحت ونحط اسم كلاسTriangle
+     val trian =Triangle()
+      //نطبع جملة +نستعدي اسم اوبجت باسم fun
+      println("Traiangle  area = half of height time base "+trian.computerArea())
+      //عرفنا اوبحت ونحط اسم كلاس Rectangle
+      val  rect=Rectangle()
+      //نطبع جملة +نستعدي اسم اوبجت باسم fun
+      println("Rectangle area = half times width  "+rect.computerArea())
+      //عرفنا اوبحت ونحط اسم كلاس Circle
+      val  circ=Circle()
+      //نطبع جملة +نستعدي اسم اوبجت باسم fun
+      println("Circle area = pi times the radius squared "+circ.computerArea())
+  }
+
+/*
+question 2
+1-   Data class: It is not unusual to create classes whose main purpose
+ is to hold data. In such classes, some standard functionality and some
+  utility functions are often mechanically derivable from the data
+all properties declared in the primary constructor: for example quals() and hashCode()
+enum classes is the implementation of type-safe enums: for example: Types of things
+
+2-it is a object expression
+ */

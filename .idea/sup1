@@ -1,0 +1,43 @@
+//the sup class all of them is going to inheritance from the  super class
+
+class `Triangle`:shap(){
+
+    val base:Double=8.9
+    val height=Double:5.8
+
+   //add the two val to definition and but override to change the legislation
+    override fun computeArea():Double {
+
+        return Triangle= (height * base)/2 )
+        println("the result")
+    }
+
+}
+
+// do the same
+class Rectangle:shap(){
+    val width=9
+    val height=8
+
+    override fun computeArea():Double{
+        return Rectangle==width*height)
+        println("the result")
+
+    }
+}
+  // i did`t know the sloution..
+    class Circle:shap() {
+        val pi = 9.0
+        val radius = 8
+        override fun computeArea(): Double {
+            (Circle = π * radius²)
+            println("result")
+        }
+    }
+}
+//defining val of name to call them
+fun main() {
+    val Triangle1=Triangle()
+    val Rectangle1=Rectangle()
+    val Circle1=Circle()
+}

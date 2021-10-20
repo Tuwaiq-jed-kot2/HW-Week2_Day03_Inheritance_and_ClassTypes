@@ -1,0 +1,39 @@
+// open the class to inheritance to other class
+//but the three value
+
+open class shap() {
+    val shapeName:""
+    val shapeColor:Double
+    val shapNum=6.0
+
+    //add two fun and return only
+    fun info(){
+    return("&shapeColor ,&shapName")
+
+    }
+    // it will be used in other class
+   open fun computeArea():Double {
+   return shapNum
+
+    }
+}
+
+fun main() {
+
+}
+// have alot of mistakes
+
+
+
+
+
+
+
+## Part II - Practice with Class types. (optional)
+---
+### Open Questions:
+- What is the difference between `enum classes` and `data classes`?
+Enum its helps to make less mistake
+data its like normal class but have ready fun =toString ,copy
+
+- Which one of the `object` keyword ways can be used for the inheritance concept?

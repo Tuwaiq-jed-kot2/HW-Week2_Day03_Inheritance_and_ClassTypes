@@ -9,7 +9,7 @@ open class Shape(val shapeName: String, val shapeColor: String) {
     }
     /*------------------------------------------------------------------------------*/
         /***** functions called "computeArea" that has no parameter, and return Double data type.*****/
-    open fun computeArea(): Double {
+    open fun computeArea(): Double {     // it is open to make this the class other classes (Triangle,Rectangle,Circle) should inherit properties and functions from.
         return 0.0
     }
 }
@@ -17,20 +17,24 @@ open class Shape(val shapeName: String, val shapeColor: String) {
         /***** subclass class called "Triangle" that return the area of Triangle.*****/
 class Triangle(var base: Double, var height: Double, shapeName: String, shapeColor: String) :
     Shape(shapeName, shapeColor) {
-    override fun computeArea(): Double = (height * base) / 2
-}
+    override fun computeArea(): Double = (height * base) / 2       //we write "override" allow us to change the body of the functions we inherit from "computeArea()"
+}                                                                                       //and the functions we inherit from "computeArea()" most be open
+                                                        //we "override fun computeArea()" in each subclass to make sure this function will compute the area according to the subclass' name.
+                                                                             //we get values from main functions when we're testing every subclass
     /*------------------------------------------------------------------------------*/
         /***** subclass class called "Rectangle" that return the area of Rectangle.*****/
 class Rectangle(var width: Double, var height: Double, shapeName: String, shapeColor: String) :
-    Shape(shapeName, shapeColor) {
-    override fun computeArea(): Double = height * width
-}
+    Shape(shapeName, shapeColor) {                                //we write "override" allow us to change the body of the functions we inherit from "computeArea()"
+    override fun computeArea(): Double = height * width                      // and the functions we inherit from "computeArea()" most be open
+}                                                    //we "override fun computeArea()" in each subclass to make sure this function will compute the area according to the subclass' name.
+                                                                             //we get values from main functions when we're testing every subclass
     /*------------------------------------------------------------------------------*/
         /***** subclass class called "Circle" that return the area of Circle.*****/
 class Circle(var radius: Double, shapeName: String, shapeColor: String) : Shape(shapeName, shapeColor) {
-    val pi: Double = 3.14
-    override fun computeArea(): Double = pi * (radius * radius)
-}
+    val pi: Double = 3.14                                    //we write "override" allow us to change the body of the functions we inherit from "computeArea()"
+    override fun computeArea(): Double = pi * (radius * radius)  // and the functions we inherit from "computeArea()" most be open
+}                                                               //we "override fun computeArea()" in each subclass to make sure this function will compute the area according to the subclass' name.
+                                                                            //we get values from main functions when we're testing every subclass
     /*------------------------------------------------------------------------------*/
 fun main() {
         /***** testing superclass "Shape" to see if it can return the name and the color of the shape.*****/

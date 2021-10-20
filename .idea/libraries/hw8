@@ -1,0 +1,65 @@
+import kotlin.math.pow
+fun main() {
+
+    val b = Triangle()
+    val b1 = Rectangle()
+    val b3 = Ciracle()
+}
+open class Sharp(val shapName :String , val sharpColor:String){//سويت كلاس وسميته وخليته open عشان الكلاسات الثانيه تقدر تورث منه وخليت جوتها variable
+open fun info():String{// سويت داله ترجع لي  string الاسم واللون وخليتها open عشان اقدر استخدمها في الكلاسات الثانيه
+    return "$shapName , $sharpColor"
+}
+    open  fun computeArea():Double{// سويت داله عشان تحسب لي المساحه وreturn tybe double خليتها open عشان subclasses يقدرون يورثون منها
+        return computeArea()
+    }
+
+}
+
+class Triangle:Sharp("Trangle", "Red") {//سويت سب كلاس وخليته يورث من السوبر كلاس الاسم واللون
+
+    val base =9.5
+    val height= 2
+    init {//استخدمت init وحطيت داخلها الدوال اللي ابغاها تنطبع مع كل object
+        println( info())
+
+        println(computeArea())
+    }
+
+    override fun computeArea(): Double {//سويت override عشان ابغا اورث fun من السوبر كلاس واعدل عليها
+// وسويتreturn وداخلها المتغيرات اللي عرفتها فوق عشان ترجع لي القيمه النهائيه للمعادله
+
+        return ( (base * height)/2 )
+    }
+}
+
+class Rectangle:Sharp("Rectangle", "blue") {
+    val width = 4.5
+    val height= 5
+    init {
+        println( info())
+
+        println(computeArea())
+    }
+
+    override fun computeArea(): Double {
+
+
+        return ( width* height )
+    }
+}
+
+class Ciracle:Sharp("Ciracle", "black") {
+    val pi = 3.14
+    val radius= 2.0
+    init {
+        println( info())
+
+        println(computeArea())
+    }
+
+    override fun computeArea(): Double {
+
+
+        return ( pi * radius.pow(2))//هنا استخدمت pow لأننا احتجنا نحط أس للمتغير
+    }
+}

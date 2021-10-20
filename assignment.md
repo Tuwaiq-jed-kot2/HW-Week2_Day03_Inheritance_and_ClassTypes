@@ -25,6 +25,12 @@ Formulas to compute area:
 ---
 ### Open Questions:
 - What is the difference between `enum classes` and `data classes`?
+- Enumerations in Kotlin are data types that hold a set of constants.
+
+A data class is something that holds the data for us. It doesn’t hold any other functionality in it.
+
 - Which one of the `object` keyword ways can be used for the inheritance concept? 
+- 
+- Used object as expression
 
 

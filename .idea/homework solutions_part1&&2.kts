@@ -1,6 +1,4 @@
-//---------------------------------------------------------part1---------------------------------------------------------
-
-// The code blow for calling libray PI
+// The code blow for PI=3.14
 import kotlin.math.PI
 
 // The code blow for mina function
@@ -25,7 +23,7 @@ fun main() {
     C.printResult()
 
 }
-// The code blow for Create class Shape
+// The code blow for Create  superclass call it Shape, we used ('open' key word) for inherited later to (Triangle,Rectangle,Circle)
 open class Shape(var shapeName:String, var shapeColor:String) {
 
     // The code blow for Create function info
@@ -37,13 +35,14 @@ open class Shape(var shapeName:String, var shapeColor:String) {
         return print
     }
     // The code blow for Create function computeArea and make it open for overriding later
+    // we need to make it open class to
     open fun computeArea():Double{
         // The code blow for return Double value
         return 0.0
     }
 }
-// The code blow for Create class Triangle and give it 2 properties ,and give it new shape name and new shape color
-
+// The code blow for Create class call it Triangle,and give it 2 properties 'base' and 'height' ,
+// we used super class 'Shape' and inherited in Triangle class,and give it shape name and  shape color
 class Triangle(val base:Double, private val height:Double):Shape("Triangle","blue"){
     // The code blow for Create function
     fun printResult(){
@@ -51,7 +50,7 @@ class Triangle(val base:Double, private val height:Double):Shape("Triangle","blu
         println((height*base)/2)
 
     }
-    // The code blow for calling function computeArea and override it
+    // The code blow for calling function computeArea and overriding to it, to return the value of the Triangle
 
     override fun computeArea(): Double {
         // The code blow for return Double value of Triangle result
@@ -61,8 +60,8 @@ class Triangle(val base:Double, private val height:Double):Shape("Triangle","blu
 
 
 }
-// The code blow for Create class Rectangle and give it 2 properties ,and give it new shape name and new shape color
-
+// The code blow for Create class call it Rectangle,and give it 2 properties 'width' and 'height' ,
+// we used super class 'Shape' and inherited in Triangle class,and give it shape name and  shape color
 class Rectangle(var width:Double, private var height:Double):Shape("Rectangle","black") {
     // The code blow for Create function
     fun printResult(){
@@ -70,13 +69,14 @@ class Rectangle(var width:Double, private var height:Double):Shape("Rectangle","
         println( height * width)
 
     }
-    // The code blow for calling function computeArea and override it
+    // The code blow for calling function computeArea and overriding to it, to return the value of the Rectangle
     override fun computeArea(): Double {
         // The code blow for return Double value of Rectangle result
         return height * width
     }
 }
-// The code blow for Create class Circle and give it 1 properties ,and give it new shape name and new shape color
+// The code blow for Create class call it Circle,and give it 2 properties 'radius' ,
+// we used super class 'Shape' and inherited in Circle class,and give it shape name and  shape color
 class Circle(var radius:Double): Shape("Circle","white") {
     // The code blow for Create function
     fun printResult(){
@@ -84,7 +84,7 @@ class Circle(var radius:Double): Shape("Circle","white") {
         println( PI *(radius*radius))
 
     }
-    // The code blow for calling function computeArea and override it
+    // The code blow for calling function computeArea and overriding to it, to return the value of the Circle
     override fun computeArea(): Double {
         // The code blow for return Double value of Circle result
         return PI *(radius*radius)

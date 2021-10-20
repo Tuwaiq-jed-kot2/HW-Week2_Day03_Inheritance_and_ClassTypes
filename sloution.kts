@@ -13,7 +13,17 @@ fun main() {
     println("The Area of Circle = " + cir1.computeArea(4.0)) //send values to computeArea function for Circle
 }
 
+/*
+update: 
 
+this shape function is open so we can use inheritance and the  class have 3  variable for shape name , color , result
+open variable used to change the values for name and color val variable , for the result i was just trying to check if its will work
+
+info function will return the shape name and shape color for the class when its called from other class
+computea area will computea area when its called form other class
+
+
+*/
 open class Shape {     //defining super Class
 
     open val shapeName = ""  // variable for shape name
@@ -35,8 +45,8 @@ open class Shape {     //defining super Class
 
 class Triangle() : Shape() {  //defining sub Class
 
-    override val shapeName = "Triangle" // override variable for shape name
-    override val shapeColor = "Yellow" // override variable for shape color
+    override val shapeName = "Triangle" // override is used to change value of val variable for shape name and shape color
+    override val shapeColor = "Yellow" 
 
     fun computeArea(height: Double, base: Double): Double { // defining computeArea Function
         result = (height * base) / 2  // compute Area for triangle
@@ -47,9 +57,9 @@ class Triangle() : Shape() {  //defining sub Class
 
 class Rectangle() : Shape() {  //defining sub Class
 
-    override val shapeName = "Rectangle" // override variable for shape name
-    override val shapeColor = "Blue" // override variable for shape color
-
+    override val shapeName = "Rectangle" // override is used to change value of val variable for shape name and shape color
+    override val shapeColor = "Blue" 
+    
     fun computeArea(height: Double, width: Double): Double {  // defining computeArea Function
         result = (height * width) // compute Area for rectangle
         return result  // return the rectangle area
@@ -59,8 +69,8 @@ class Rectangle() : Shape() {  //defining sub Class
 
 class Circle() : Shape() {  //defining sub Class
 
-    override val shapeName = "Circle"  // override variable for shape name
-    override val shapeColor = "Green" // override variable for shape color
+    override val shapeName = "Circle"  // override is used to change value of val variable for shape name and shape color
+    override val shapeColor = "Green" 
 
     fun computeArea(radius: Double): Double { // defining computeArea Function
         val pi = Math.PI  // variable for Pi value 3.14....

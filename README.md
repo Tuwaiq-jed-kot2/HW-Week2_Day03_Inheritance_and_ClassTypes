@@ -12,36 +12,39 @@ Open the [assignment.md](assignment.md) file to get started.
 
 fun main() {//object of Triangle class,Rectangle class,Circle class
 
-val tri = Triangle()
-val rec = Rectangle()
-val cir = Circle()
+var tri = Triangle()
+var rec = Rectangle()
+var cir = Circle()
 
 println(tri.computeArea())
 println(rec.computeArea())
 println(cir.computeArea())
-
+}
 open class Shape() {  //super class
-var shapeName: String = ""
-var shapeColor: String = ""
+var shapeName: String
+var shapeColor: String
+
 
       init { // initialize the properties
-         name1 = "oo"
-         color = "red"
+         shapeName = ""
+         shapeColor = ""
       }
 
-      fun info(name1: String, color: String): String {
+      fun info(): String {
          return ("$shapeColor $shapeName")
       }
 
-      open fun computeArea(number: Double) {
+      open fun computeArea():Double {
+         var area = 0.0
+         return area
       }
 
 }
 // Subclasses below (singleton classes)
 
-class Triangle: Shape(){
+class Triangle: Shape() {
 var base: Double
-private var height: Double
+var height: Double
 
       init { //  initialize the properties
          base = 2.2
@@ -51,10 +54,11 @@ private var height: Double
       override fun computeArea(): Double { //  override the computeArea function to use it
          return ((height * base) / 2)
       }
+}
 
 
-      inner class Rectangle: Shape() { // subclass  inherits from Shape class
-         var base: Double = 0.0
+       class Rectangle: Shape() { // subclass  inherits from Shape class
+         var width: Double = 0.0
          var height: Double = 0.0
 
          init { //  initialize the properties
@@ -62,28 +66,34 @@ private var height: Double
             height = 2.2
          }
 
-         override fun computeArea(number: Double) { // override the computeArea fun to use it
+         override fun computeArea():Double { // override the computeArea fun to use it
 
             return height * width
          }
       }
 
-      inner class Circle: Shape() { //(declare)
+       class Circle: Shape() { //(declare)
          var pi: Double
          var radius: Double
 
          init {
             // here I initialized the properties
-            pi = 2.2
+            pi = 3.1415
             radius = 2.2
          }
 
          //Circle area = pi times the radius squared (A = π*r²)
-         override fun computeArea(number: Double) { // override the computeArea fun to use it
+         override fun computeArea():Double { // override the computeArea fun to use it
 
-            return pi * radius.pow(2)
+            return( pi * (radius * radius))
 
          }
       }
-}
-}
+
+
+
+
+
+
+
+

@@ -1,0 +1,93 @@
+fun main() {
+    val shape = Shapes("Square", "Red")
+    println(shape.shapeName)
+    println(shape.shapeColor)
+    shape.info("Trinagle", "Blue")
+    //shape.computeArea()
+    shape.info("Circle", "Orange")
+    shape.info("Rectangle", "White")
+
+}
+// I Declared the var in primary constructor since I am going
+//to inherit it ( for usability)
+
+
+open class Shapes(
+    var shapeName: String,
+    var shapeColor: String
+) {   // I open the superclass so can subclass  inherent from it
+
+    //  here I initialize the variables with the init and call the info fun
+
+    init {
+        shapeName = ""
+        shapeColor = ""
+        this.info("", "")
+        println()
+        this.computeArea()
+        println(this.computeArea())
+        println(this.computeArea())
+        println(this.computeArea())
+        println(this.computeArea())
+
+
+    }
+
+    open fun info(shapeName: String, shapeColor: String) {   // I used info fun with the shapeName and shapeColor
+        println("The shape is $shapeName")  // i use $ sign as a placeholder for the name and color
+        println("the color is $shapeColor")
+
+    }
+
+
+    open fun computeArea(): Double {
+        val triangle = "base / height"
+        val circle = "PI * radius* radius"
+
+        return 3.14159 * 3.14159 * 314159
+
+    }
+}
+
+
+class Triangle : Shapes("Triangle", "Blue") { // I inherited form class Shapes
+
+    override fun info(shapeName: String, shapeColor: String) { // here i override
+
+    }
+
+    // i could not fix it
+    override fun computeArea(): Double {
+        return super.computeArea()
+        val base = 20.0
+        val height = 30.0
+        val area: Double = 1.0 * 2.0 * 20 * 30
+        return 1.02 * 02.01 * 30
+
+    }
+
+    class Circle : Shapes("Circle", "Orange") { // I inherited form class Shapes
+
+        override fun computeArea(): Double {  //
+            return super.computeArea()
+            fun computeArea(): Double {
+                val pi = 3.14159
+                val rad = 0.0
+                pi * rad * rad
+                return 3.14159 * 3.14159 * 314159
+            }
+        }
+
+    }
+
+
+}
+
+
+
+
+
+
+
+
+

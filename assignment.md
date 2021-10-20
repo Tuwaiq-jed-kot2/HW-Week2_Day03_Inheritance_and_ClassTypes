@@ -25,6 +25,10 @@ Formulas to compute area:
 ---
 ### Open Questions:
 - What is the difference between `enum classes` and `data classes`?
+- Enum class is for defining a collection of constant,while data class is for holding data and can manipulate
+its data
+- 
+- 
 - Which one of the `object` keyword ways can be used for the inheritance concept? 
-
+use object as expression
 

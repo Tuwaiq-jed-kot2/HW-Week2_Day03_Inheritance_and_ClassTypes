@@ -1,12 +1,56 @@
-<?xml version="1.0" encoding="UTF-8"?>
-<module type="JAVA_MODULE" version="4">
-  <component name="NewModuleRootManager" inherit-compiler-output="true">
-    <exclude-output />
-    <content url="file://$MODULE_DIR$">
-      <sourceFolder url="file://$MODULE_DIR$/src" isTestSource="false" />
-    </content>
-    <orderEntry type="inheritedJdk" />
-    <orderEntry type="sourceFolder" forTests="false" />
-    <orderEntry type="library" name="KotlinJavaRuntime" level="project" />
-  </component>
-</module>
+import kotlin.math.pow
+
+
+open class Shape { //making shape class open to accept inheritance as a super class
+
+    private val shapeName = "circle"
+    private val shapeColor = "red"
+
+    fun info()  : String{
+        return "The shape $shapeName color is $shapeColor "//returning shape name and color
+    }
+    open fun computeArea():Double{ // making the function open to allow inheritance
+        return 0.0
+    }
+
+}
+class Triangle : Shape(){ //allow class triangle to inherit from class shape
+
+    private val base = 2.0
+    private val height = 4.0
+
+    override fun computeArea(): Double { //override the function computeArea to calculate the triangle area
+        print("the Triangle area size is : ")
+        return height * base /2 //returning triangle area size
+    }
+}
+class Rectangle : Shape(){//allow class Rectangle to inherit from class shape
+
+    private val width = 2.0
+    private val height= 4.0
+
+    override fun computeArea(): Double {//override the function computeArea to calculate the rectangular area
+        print("The Rectangle area size is : ")
+        return width * height //returning rectangle area size
+    }
+}
+
+class Circle : Shape(){//allow class Circle to inherit from class shape
+
+    private val pi = 3.14
+    private val radius = 2
+
+    override fun computeArea(): Double {//override the function computeArea to calculate the circle area
+        print("The Circle area size is : ")
+        return pi * radius.toDouble().pow(2) //returning circle area size
+    }
+}
+
+fun main() {
+                                       //try on the classes and print the result
+    println(Shape().info())
+    println(Triangle().computeArea())
+    println(Rectangle().computeArea())
+    println(Circle().computeArea())
+
+}

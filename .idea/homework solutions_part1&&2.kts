@@ -42,7 +42,7 @@ open class Shape(var shapeName:String, var shapeColor:String) {
     }
 }
 // The code blow for Create class call it Triangle,and give it 2 properties 'base' and 'height' ,
-// we used super class 'Shape' and inherited in Triangle class,and give it shape name and  shape color
+// we used super class 'Shape' and inherited to supclass class 'Triangle' ,and give it shape name and  shape color
 class Triangle(val base:Double, private val height:Double):Shape("Triangle","blue"){
     // The code blow for Create function
     fun printResult(){
@@ -61,7 +61,7 @@ class Triangle(val base:Double, private val height:Double):Shape("Triangle","blu
 
 }
 // The code blow for Create class call it Rectangle,and give it 2 properties 'width' and 'height' ,
-// we used super class 'Shape' and inherited in Triangle class,and give it shape name and  shape color
+// we used super class 'Shape' and inherited to supclass class 'Rectangle',and give it shape name and  shape color
 class Rectangle(var width:Double, private var height:Double):Shape("Rectangle","black") {
     // The code blow for Create function
     fun printResult(){
@@ -76,7 +76,7 @@ class Rectangle(var width:Double, private var height:Double):Shape("Rectangle","
     }
 }
 // The code blow for Create class call it Circle,and give it 2 properties 'radius' ,
-// we used super class 'Shape' and inherited in Circle class,and give it shape name and  shape color
+// we used super class 'Shape' and inherited to supclass class 'Circle' ,and give it shape name and  shape color
 class Circle(var radius:Double): Shape("Circle","white") {
     // The code blow for Create function
     fun printResult(){

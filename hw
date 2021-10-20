@@ -1,18 +1,26 @@
 
 // part 1
 fun main() {
-
-    val tr = Triangle() // create an object from subclass triangle
-    tr.Info()  // access for function Info that print shape information
+   // create an object from subclass triangle
+    val tr = Triangle()
+    // access for function Info that print shape information
+    tr.Info()
+    // print the result of compute area for triangle
     println(tr.computeArea()) // print the result of compute area for triangle
 
-    val rc = Rectangle() // create an object from subclass rectangle
-    rc.Info() // access for function Info that print shape information
-    println(rc.computeArea()) // print the result of compute area for rectangle
+    // create an object from subclass rectangle
+    val rc = Rectangle()
+    // access for function Info that print shape information
+    rc.Info()
+    // print the result of compute area for rectangle
+    println(rc.computeArea())
 
-    val c = Circle() // create an object from subclass circle
-    c.Info() //access for function Info that print shape information
-    println(c.computeArea()) // print the result of compute area for circle
+    // create an object from subclass circle
+    val c = Circle()
+    //access for function Info that print shape information
+    c.Info()
+    // print the result of compute area for circle
+    println(c.computeArea())
 
 }
 

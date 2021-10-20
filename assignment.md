@@ -25,6 +25,9 @@ Formulas to compute area:
 ---
 ### Open Questions:
 - What is the difference between `enum classes` and `data classes`?
+  - Enum classes represent a concrete set of values, while sealed classes represent a concrete set of classes.
 - Which one of the `object` keyword ways can be used for the inheritance concept? 
+- There are three ways to use the object keyword: object declarations, object expressions, and
+  companion objects.
 
 

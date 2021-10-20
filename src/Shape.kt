@@ -9,7 +9,7 @@ open class Shape(val shapeName: String, val shapeColor: String) {
     }
     /*------------------------------------------------------------------------------*/
         /***** functions called "computeArea" that has no parameter, and return Double data type.*****/
-    open fun computeArea(): Double {     // it is open to make this the class other classes (Triangle,Rectangle,Circle) should inherit properties and functions from.
+    open fun computeArea(): Double {                 // it is open to allow subclass (Triangle,Rectangle,Circle) to change in body of the functions and compute the area according to the subclass' name.
         return 0.0
     }
 }

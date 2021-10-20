@@ -21,10 +21,25 @@ Formulas to compute area:
 `Triangle area = half of height times base (A = (h * b)/2 )`
 ```
 
+
 ## Part II - Practice with Class types. (optional)
 ---
 ### Open Questions:
 - What is the difference between `enum classes` and `data classes`?
-- Which one of the `object` keyword ways can be used for the inheritance concept? 
+- enum class:  the most use to implementation of type-safe enum.
+the primary constructor is optional 
+ex:
+enum class Car{
+    FORWARD
+    BACKWARD
+}
+- data class : used to hold data. 
+primary constructor required and should use val/var
+ex:
+data class Person(val name: String, var age: Int)
+and we can use the members automatically
+  equals() / hashCode() / toString() / componentN() / copy()
+- Which one of the `object` keyword ways can be used for the inheritance concept?
+  object as expression
 
 

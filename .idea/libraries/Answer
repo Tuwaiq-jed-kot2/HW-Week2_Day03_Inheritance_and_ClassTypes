@@ -3,12 +3,12 @@ open class shape { // i made open class to inheriting
 
 
 
-    fun info() : String{ //required fun
+    fun info() : String{ //required fun for open class shape
 
         return ("the Shape Name is: $shapeName \n The Shape Color is: $shapeColor")
 
     }
-    open var shapeName="" // required var's
+    open var shapeName="" // required var's of class shape
     open var shapeColor =""
 
     open fun computeArea():Double {  //we need to inheriting from this fun so i made it open
@@ -21,21 +21,21 @@ open class shape { // i made open class to inheriting
 
 
 }
-class triangle :shape(){ //first class from the Super!
+class triangle :shape(){ //first subclass from the Super!
 
-    override fun computeArea():Double{
+    override fun computeArea():Double{ //made it override to inheritance
 
-        val base =3.2  //value for eich
+        val base =3.2  //give value for eich to make an Arithmetic operation.
         val high =2.6
 
-        return (base*high)/2 //العمليه الحسابية :
+        return (base*high)/2 //and here is the Arithmetic operation:
 
 
     }
 
 
 }
-class Rectangle :shape(){ //the second class form the Super!
+class Rectangle :shape(){ //the second subclass form the Super!
     override fun computeArea():Double{
 
 
@@ -49,7 +49,7 @@ class Rectangle :shape(){ //the second class form the Super!
 
 
 }
-class circle :shape(){
+class circle :shape(){ //thread one
     override fun computeArea():Double{
 
         val pi  = 3.14
